@@ -81,6 +81,14 @@ npm run preview       # Preview production build
 
 ## Configuration
 
+Before changing configuration, copy the example files and keep your local copies private:
+
+```bash
+cp .env.example .env
+cp backend/.env.example backend/.env
+cp frontend/.env.example frontend/.env.local
+```
+
 ### Environment Variables
 
 #### Backend (`.env` or docker-compose.yml)
@@ -94,6 +102,16 @@ npm run preview       # Preview production build
 |----------|---------|-------------|
 | `VITE_API_URL` | `http://localhost:8000` | Backend API URL |
 | `VITE_DEFAULT_MODEL` | `llama3.1:latest` | Default model selector value |
+
+### What Not To Commit
+
+Keep local configuration and generated artifacts out of Git:
+
+- `.env`, `.env.*`, `backend/.env`, and `frontend/.env.local`
+- secret material such as `*.pem`, `*.key`, `*.p12`, `*.pfx`, `.secrets/`, and `secrets/`
+- generated files such as `frontend/dist/`, `dist/`, `build/`, `coverage/`, `__pycache__/`, and `*.pyc`
+- local Docker overrides such as `docker-compose.override.yml`
+- local databases such as `*.sqlite`, `*.sqlite3`, and `*.db`
 
 ### Model Selection
 The frontend includes a model selector in the settings panel (click the gear icon). Available models:
