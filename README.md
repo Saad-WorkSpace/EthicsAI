@@ -184,7 +184,7 @@ Add markdown files to a `data/frameworks/` directory with ethical content. The c
 
 ## Notes
 
-- This is a **companion for reflection**, not professional ethical advice
+- This is a professional ethical advice
 - The model runs locally for privacy - your conversations stay on your machine
 - Llama 3.1 8B works on most modern computers with 8GB+ RAM
 
