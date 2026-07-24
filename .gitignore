@@ -2,21 +2,58 @@
 .env
 .env.*
 !.env.example
+!.env.*.example
 *.env
 *.env.*
 !*.env.example
+!*.env.*.example
 backend/.env
 backend/.env.*
 !backend/.env.example
+!backend/.env.*.example
 frontend/.env
 frontend/.env.*
 !frontend/.env.example
+!frontend/.env.*.example
+.envrc
+.direnv/
+*.local
 .secrets/
 secrets/
 *.pem
 *.key
 *.p12
 *.pfx
+*.ppk
+*.jks
+*.keystore
+*.kdbx
+id_rsa*
+id_dsa*
+id_ecdsa*
+id_ed25519*
+
+# Package-manager, cloud, and service credentials
+.npmrc
+!.npmrc.example
+.pypirc
+.netrc
+.authinfo
+.docker/config.json
+.aws/
+.azure/
+.gcloud/
+.kube/
+service-account*.json
+*-service-account.json
+firebase-adminsdk*.json
+
+# Infrastructure state may contain secrets
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
 
 # Python
 __pycache__/
@@ -33,8 +70,6 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.npmrc
-!.npmrc.example
 
 # Build output
 frontend/dist/
@@ -59,5 +94,10 @@ docker-compose.override.yml
 *.sqlite
 *.sqlite3
 *.db
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+*.dump
+*.backup
 data/local/
 data/tmp/
