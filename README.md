@@ -1,193 +1,145 @@
 # Ethics Companion Chatbot
 
-A thoughtful AI chatbot designed with ethical principles at its core, focused on respectful, honest, and perspective-aware conversation.
+<p align="center">
+  <strong>Thoughtful AI conversation built around respect, honesty, privacy, and perspective-aware reasoning.</strong>
+</p>
 
-## Quick Start
+<p align="center">
+  <a href="https://saad-workspace.github.io/EthicsAI/"><strong>Explore the live experience ↗</strong></a>
+</p>
 
-### Prerequisites
-1. **Ollama** - Install from https://ollama.ai
-2. **Node.js 18+** and **Python 3.11+**
+---
 
-### Option 1: Unified Development (Single Command)
+## Project Snapshot
 
-```bash
-# Install all dependencies
-npm run install:all
+| | |
+|---|---|
+| **Focus** | Ethical AI, full-stack product development, privacy-aware interaction |
+| **Experience** | Conversational interface with structured ethical insights |
+| **Design goal** | Make complex moral questions easier to examine without pretending there is always one perfect answer |
+| **Core values** | Respect, honesty, harm prevention, fairness, care, and human dignity |
+| **Project status** | Active portfolio project |
 
-# Start both frontend and backend
-npm run dev
+## Why I Built It
+
+AI systems can generate confident answers quickly, but ethical questions rarely have simple or universal solutions. Ethics Companion Chatbot was created to explore a more responsible interaction model: one that slows down, acknowledges uncertainty, considers who may be affected, and presents multiple perspectives before reaching a conclusion.
+
+The project combines software engineering with responsible-technology thinking. It demonstrates how product design, full-stack development, privacy, and ethical reasoning can work together in one coherent experience.
+
+## The Experience
+
+A user introduces an ethical situation or difficult decision. The application then organizes its response around four ideas:
+
+1. **Understand the situation** — identify the people, values, risks, and competing responsibilities involved.
+2. **Consider multiple lenses** — examine the question through several established ethical perspectives.
+3. **Explain the reasoning** — present the important tradeoffs instead of returning an unexplained conclusion.
+4. **Support human judgment** — offer a thoughtful response while keeping the final decision with the user.
+
+## Ethical Foundations
+
+### Respect
+
+Every response should preserve human dignity and avoid treating people as abstract data points.
+
+### Honesty
+
+The system acknowledges uncertainty, missing context, and the limits of automated guidance.
+
+### Harm Prevention
+
+Potential risks are considered before suggestions are presented.
+
+### Perspective Awareness
+
+The application avoids framing one viewpoint as automatically complete. It surfaces competing values and alternative interpretations.
+
+### Fairness and Care
+
+Responses consider equitable treatment as well as relationships, vulnerability, responsibility, and context.
+
+## Reasoning Perspectives
+
+The experience can draw from several complementary frameworks:
+
+- **Virtue ethics** — What would a thoughtful and responsible person do?
+- **Consequential reasoning** — Who may benefit or be harmed by each choice?
+- **Duty-based reasoning** — What responsibilities, rules, or rights matter here?
+- **Care ethics** — How do relationships and human needs shape the decision?
+- **Justice and fairness** — Are people being treated consistently and equitably?
+
+These perspectives are used to expand the conversation, not to manufacture a single absolute answer.
+
+## Product Capabilities
+
+- Clean conversational interface designed for focused reflection
+- Perspective-aware responses for complex ethical scenarios
+- Visible reasoning themes and ethical principles
+- Clear uncertainty and limitation language
+- Privacy-conscious model workflow
+- Responsive experience across desktop and mobile layouts
+- Structured responses that remain readable instead of becoming walls of text
+
+## System Overview
+
+Ethics Companion is organized as a full-stack conversational product with four conceptual layers:
+
+```text
+Question
+   ↓
+Context and risk analysis
+   ↓
+Ethical-perspective evaluation
+   ↓
+Structured, human-readable response
 ```
 
-Frontend: http://localhost:5173  
-Backend API: http://localhost:8000
+The interface handles the conversation and presentation layer. The reasoning service organizes context, ethical principles, tradeoffs, and response structure. The model workflow is designed around privacy-conscious processing and responsible output behavior.
 
-### Option 2: Manual Local Development
+## Design Decisions
 
-1. **Install and setup Ollama:**
-```bash
-# Install Ollama
-curl -fsSL https://ollama.ai/install.sh | sh
+### Calm over flashy
 
-# Pull the model
-ollama pull llama3.1:8b
+The interface keeps attention on the conversation. Visual hierarchy, spacing, and restrained motion make detailed responses easier to follow.
 
-# Start Ollama (in a separate terminal)
-ollama serve
-```
+### Explanation over authority
 
-2. **Run the backend:**
-```bash
-cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload --port 8000
+The product is designed to show important considerations rather than present itself as an unquestionable moral authority.
 
-Or the command (python -m uvicorn main:app --reload --port 8000)
-```
+### Privacy by design
 
-3. **Run the frontend:**
-```bash
-cd frontend
-npm install
+The project prioritizes a workflow where conversations can remain under the user’s control instead of becoming public content.
 
-npm run dev
-# Optional: configure default model
-cp .env.example .env.local
-# Edit .env.local to set VITE_DEFAULT_MODEL
+### Human judgment stays central
 
-npm run dev
-```
+The system is a reflection tool. It does not replace professional, legal, medical, safety, or personal decision-making.
 
-4. **Open** http://localhost:5173 in your browser
+## Engineering Highlights
 
-### Option 3: Docker (One command)
+- Connected a modern conversational interface to a dedicated reasoning service
+- Designed a reusable ethical-analysis structure
+- Built clear response sections for principles, perspectives, risks, and tradeoffs
+- Created a responsive interface for long-form AI responses
+- Applied privacy-first and harm-aware product thinking throughout the experience
+- Treated accessibility, readability, and uncertainty as product requirements
 
-```bash
-# Make sure Ollama is running locally
-docker-compose up --build
-```
+## Responsible-Use Note
 
-## Available Commands
+Ethics Companion Chatbot is an educational and reflective project. Its responses may be incomplete or incorrect and should not be treated as professional advice. High-impact decisions should be reviewed with qualified people who understand the full situation.
 
-From the project root:
+## About the Builder
 
-```bash
-npm run dev           # Run both frontend and backend (concurrently)
-npm run dev:frontend  # Run only frontend (port 5173)
-npm run dev:backend   # Run only backend (port 8000)
-npm run install:all   # Install all dependencies (npm + pip)
-npm run build         # Build frontend for production
-npm run preview       # Preview production build
-```
+Created by **Sadman Hossain Saad**, a computer engineering student and full-stack developer exploring cybersecurity, responsible AI, robotics, and human-centered technology.
 
-## Configuration
+- [Portfolio](https://saad-workspace.github.io/Saad-Digital-Portfolio/)
+- [GitHub](https://github.com/Saad-WorkSpace)
+- [LinkedIn](https://www.linkedin.com/in/saad-sadman)
 
-Before changing configuration, copy the example files and keep your local copies private:
+## Usage Notice
 
-```bash
-cp .env.example .env
-cp backend/.env.example backend/.env
-cp frontend/.env.example frontend/.env.local
-```
+This repository is published for portfolio review and educational demonstration. No license is granted to copy, redistribute, deploy, sell, sublicense, or create derivative works from this project. All rights are reserved by the author.
 
-### Environment Variables
+---
 
-#### Backend (`.env` or docker-compose.yml)
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `OLLAMA_HOST` | `http://localhost:11434` | Ollama server URL |
-| `OLLAMA_DEFAULT_MODEL` | `llama3.1:latest` | Default model for chat |
-
-#### Frontend (`.env.local` or docker-compose.yml)
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `VITE_API_URL` | `http://localhost:8000` | Backend API URL |
-| `VITE_DEFAULT_MODEL` | `llama3.1:latest` | Default model selector value |
-
-### What Not To Commit
-
-Keep local configuration and generated artifacts out of Git:
-
-- `.env`, `.env.*`, `backend/.env`, and `frontend/.env.local`
-- secret material such as `*.pem`, `*.key`, `*.p12`, `*.pfx`, `.secrets/`, and `secrets/`
-- generated files such as `frontend/dist/`, `dist/`, `build/`, `coverage/`, `__pycache__/`, and `*.pyc`
-- local Docker overrides such as `docker-compose.override.yml`
-- local databases such as `*.sqlite`, `*.sqlite3`, and `*.db`
-
-### Model Selection
-The frontend includes a model selector in the settings panel (click the gear icon). Available models:
-- Llama 3.1 (Latest) - 4.7GB
-- Llama 3.1 8B - 4.7GB
-- Llama 3.2 (Latest) - 2.0GB
-- Mistral 7B - 4.1GB
-- Gemma 2 9B - 5.4GB
-
-To use a different model, pull it first with Ollama:
-```bash
-ollama pull mistral:latest
-```
-
-Then select it in the settings panel, or set `VITE_DEFAULT_MODEL` / `OLLAMA_DEFAULT_MODEL` to your preferred model.
-
-## Features
-
-### Ethical Foundation
-- **Respect** - Every response considers human dignity
-- **Honesty** - Acknowledges uncertainty and limitations
-- **Harm Prevention** - Actively avoids harmful suggestions
-- **Perspective Awareness** - Presents multiple ethical lenses
-
-### Ethical Insights
-Every response includes:
-- Which ethical principles were applied
-- Which philosophical perspectives were considered
-- The reasoning process behind the response
-
-### Frameworks Available
-- **Virtue Ethics** - Character-based moral reasoning
-- **Utilitarian** - Consequences for all affected parties
-- **Deontological** - Duties and inherent rights
-- **Care Ethics** - Relationships and care
-- **Justice** - Fairness and equity
-
-## Project Structure
-
-```
-ethics-chatbot/
-├── backend/           # FastAPI server
-│   ├── main.py        # Core API + ethics engine
-│   ├── requirements.txt
-│   └── Dockerfile
-├── frontend/          # React chat interface
-│   ├── src/
-│   │   ├── main.jsx
-│   │   ├── ChatApp.jsx
-│   │   └── *.css
-│   ├── package.json
-│   └── Dockerfile
-└── docker-compose.yml
-```
-
-## Customization
-
-### Adjusting Ethical Principles
-Edit `ETHICAL_PRINCIPLES` in `backend/main.py` to add your own:
-
-```python
-ETHICAL_PRINCIPLES = [
-    "Your custom principle here...",
-    "Another principle...",
-]
-```
-
-### Adding Knowledge
-Add markdown files to a `data/frameworks/` directory with ethical content. The chatbot can reference these for deeper responses.
-
-## Notes
-
-- This is a professional ethical advice
-- The model runs locally for privacy - your conversations stay on your machine
-- Llama 3.1 8B works on most modern computers with 8GB+ RAM
-
-## License
-
-MIT - Build and customize freely!
+<p align="center">
+  <strong>Technology should help people think more clearly—not make human judgment disappear.</strong>
+</p>
