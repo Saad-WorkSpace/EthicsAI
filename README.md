@@ -122,6 +122,28 @@ The system is a reflection tool. It does not replace professional, legal, medica
 - Applied privacy-first and harm-aware product thinking throughout the experience
 - Treated accessibility, readability, and uncertainty as product requirements
 
+## Secret Protection
+
+### What Not To Commit
+
+Keep local configuration and generated artifacts out of Git:
+
+- `.env`, `.env.*`, `backend/.env`, and `frontend/.env.local`
+- secret material such as private keys, keystores, cloud credentials, `.secrets/`, and `secrets/`
+- package-manager auth files such as `.npmrc`, `.pypirc`, and `.netrc`
+- infrastructure state and variable files such as `*.tfstate` and `*.tfvars`
+- generated files such as `frontend/dist/`, `dist/`, `build/`, `coverage/`, `__pycache__/`, and `*.pyc`
+- local Docker overrides such as `docker-compose.override.yml`
+- local databases such as `*.sqlite`, `*.sqlite3`, and `*.db`
+
+### Handling Secrets Safely
+
+- Keep backend-only credentials in `backend/.env`, which is ignored by Git. Commit only placeholder values in `.env.example` files.
+- Never put a secret in a `VITE_*` variable. Vite includes those values in browser code, so every site visitor can read them.
+- Store deployment credentials in GitHub Actions secrets, then reference them as `${{ secrets.SECRET_NAME }}` in workflows.
+- The `Secret scan` workflow checks pushes and pull requests for accidentally committed credentials.
+- If a real credential is ever committed, revoke or rotate it immediately. Deleting the file or adding it to `.gitignore` does not remove it from Git history.
+
 ## Responsible-Use Note
 
 Ethics Companion Chatbot is an educational and reflective project. Its responses may be incomplete or incorrect and should not be treated as professional advice. High-impact decisions should be reviewed with qualified people who understand the full situation.
